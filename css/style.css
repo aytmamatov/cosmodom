@@ -1,0 +1,38 @@
+:root {
+  --color-title: #000;
+  --color-text: #131313;
+  --color-yellow: #FFBC68;
+  --width-xxl: 1650px;
+  --base-padding: 15px;
+  --font-krona-one: "Krona One", sans-serif;
+  --font-monoton: "Monoton", cursive;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-open-sans: "Open Sans", sans-serif;
+  --base-font-size: 16px;
+}
+
+:root {
+  --color-title: #000;
+  --color-text: #131313;
+  --color-yellow: #FFBC68;
+  --width-xxl: 1650px;
+  --base-padding: 15px;
+  --font-krona-one: "Krona One", sans-serif;
+  --font-monoton: "Monoton", cursive;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-open-sans: "Open Sans", sans-serif;
+  --base-font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: var(--width-xxl);
+  padding: 0 var(--base-padding);
+}
+
+/*# sourceMappingURL=style.css.map */
