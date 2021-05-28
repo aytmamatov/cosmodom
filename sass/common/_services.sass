@@ -1,0 +1,35 @@
+.services
+  padding-top: 100px
+  &__title
+    margin-bottom: 40px
+  &__wrap
+    max-width: 1300px
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    @include media($width-md)
+      justify-content: center
+.service
+  min-width: 320px
+  transition: .2s
+  font-family: var(--font-montserrat)
+  padding: 30px
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  cursor: pointer
+  &:hover
+    background: var(--color-white)
+    box-shadow: var(--box-shadow)
+    border-radius: var(--radiuse-size-sm)
+  &__icon
+    margin-bottom: 22px
+  &__title
+    margin-bottom: 27px
+    font-weight: 600
+    font-size: 24px
+  &__btn
+    padding: 5px 48px

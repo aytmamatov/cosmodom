@@ -7,6 +7,9 @@ a
 button
   border: none
   cursor: pointer
+.wrapper
+  position: relative
+  overflow: hidden
 .container
   max-width: var(--width-container-xxl)
   padding: 0 var(--base-padding)
@@ -22,3 +25,20 @@ button
       text-align: center
   &--yellow
     color: var(--color-yellow)
+.btn
+  transition: .2s
+  color: var(--color-text)
+  font-family: var(--font-montserrat)
+  border-radius: var(--radius-size)
+  background: var(--color-yellow)
+  &:hover
+    background: darken($color-yellow, 10%)
+    color: lighten($color-yellow, 50%)
+.title
+  font-family: var(--font-montserrat)
+  font-weight: 600
+  font-size: 48px
+  color: var(--color-yellow)
+  text-transform: uppercase
+  @include media($width-md)
+    text-align: center
