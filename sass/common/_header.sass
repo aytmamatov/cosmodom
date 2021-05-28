@@ -1,0 +1,58 @@
+$hamburger-types: (3dx)
+@import ./../../node_modules/hamburgers/_sass/hamburgers/hamburgers
+.header
+  position: relative
+  min-height: 100vh
+  background: url('./../../img/cosmodom-min.jpg') no-repeat 0 0 / cover
+  backdrop-filter: blur(30px)
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    backdrop-filter: blur(30px)
+    background: rgba(0, 0, 0, 0.15)
+  &__container
+    position: relative
+    z-index: 2
+    min-height: 100vh
+  &__wrap
+  &__wrap, &__inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__inner
+    @include media($width-hamburger)
+      transition: .2s
+      position: absolute
+      top: -100%
+      left: 50%
+      width: 50%
+      height: 100%
+      background: #fff
+      &.is-active
+        transition: .2s
+        top: 0
+
+  &__link
+    font-family: var(--font-montserrat)
+    font-size: 18px
+    color: var(--color-title)
+    margin-right: 60px
+    @include media($width-xxl)
+      margin-right: 20px
+    &:last-child
+      margin-right: 130px
+  &__number
+    font-family: var(--font-montserrat)
+    font-size: 18px
+    font-weight: bold
+    color: var(--color-title)
+.hamburger
+  position: relative
+  z-index: 2
+  display: none
+  @include media($width-hamburger)
+    display: block
