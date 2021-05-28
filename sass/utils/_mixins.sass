@@ -1,3 +1,6 @@
 @mixin media($width)
   @media ( max-width: $width  )
     @content
+@mixin media_min_height($height, $width)
+  @media ( min-height: $height  ) and (min-width: $width)
+    @content

@@ -4,6 +4,9 @@
   margin: 0
 a
   text-decoration: none
+button
+  border: none
+  cursor: pointer
 .container
   max-width: var(--width-container-xxl)
   padding: 0 var(--base-padding)
@@ -13,5 +16,9 @@ a
   text-transform: uppercase
   font-family: var(--font-monoton)
   font-size: 30px
+  &--position
+    @include media($width-mobile)
+      flex: 1
+      text-align: center
   &--yellow
     color: var(--color-yellow)

@@ -5,6 +5,7 @@ $hamburger-types: (3dx)
   min-height: 100vh
   background: url('./../../img/cosmodom-min.jpg') no-repeat 0 0 / cover
   backdrop-filter: blur(30px)
+  overflow: hidden
   &::after
     content: ''
     position: absolute
@@ -18,8 +19,14 @@ $hamburger-types: (3dx)
     position: relative
     z-index: 2
     min-height: 100vh
-  &__wrap
-  &__wrap, &__inner
+    &.is-active
+      z-index: auto
+  &__top
+    padding-top: 50px
+    @include media_min_height($height, $width-hamburger)
+      padding-top: 130px
+
+  &__top, &__inner
     display: flex
     align-items: center
     justify-content: space-between
@@ -27,32 +34,99 @@ $hamburger-types: (3dx)
     @include media($width-hamburger)
       transition: .2s
       position: absolute
-      top: -100%
-      left: 50%
-      width: 50%
+      top: 0
+      right: -100%
+      width: 40%
       height: 100%
       background: #fff
-      &.is-active
-        transition: .2s
-        top: 0
-
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      justify-content: center
+    @include media($width-sm)
+      width: 50%
+    @include media($width-mobile)
+      width: 70%
+    &.is-active
+      transition: .2s
+      right: 0
+      z-index: 2
+  &__menu
+    @include media($width-hamburger)
+      width: 100%
+      display: flex
+      flex-direction: column
+      text-align: right
   &__link
     font-family: var(--font-montserrat)
     font-size: 18px
     color: var(--color-title)
     margin-right: 60px
+    @include media(1550px)
+      margin-right: 35px
     @include media($width-xxl)
       margin-right: 20px
+    @include media($width-hamburger)
+      margin-right: 0
+      margin-bottom: 20px
+      border-bottom: 1px solid var(--color-yellow)
+      padding-right: 15px
+      padding-bottom: 15px
     &:last-child
-      margin-right: 130px
+      margin-right: 120px
+      @include media($width-xxl)
+        margin-right: 80px
+      @include media($width-hamburger)
+        margin-right: 0
   &__number
     font-family: var(--font-montserrat)
     font-size: 18px
     font-weight: bold
     color: var(--color-title)
+    @include media($width-hamburger)
+      padding-right: 15px
+  &__middle
+    margin-top: 100px
+    font-family: var(--font-montserrat)
+    color: var(--color-white)
+    @include media_min_height($height, $width-hamburger)
+      margin-top: 200px
+
+    @include media($width-hamburger)
+      margin-top: 100px
+  &__heading
+    font-size: 70px
+    font-weight: 600
+    margin-bottom: 25px
+    @include media_min_height($height, $width-hamburger)
+      font-size: 96px
+
+    @include media($width-hamburger)
+      font-size: 80px
+    @include media($width-xl)
+      font-size: 60px
+    @include media($width-sm)
+      font-size: 48px
+    @include media($width-mobile)
+      font-size: 36px
+    &--logo
+      text-transform: uppercase
+      &-color
+        color: var(--color-yellow)
+  &__desc
+    max-width: 517px
+    font-weight: 500
+    font-size: 18px
+    margin-bottom: 26px
+  &__call
+    padding: 6px 28px
+    background: var(--color-yellow)
+    border-radius: 5px
+    color: var(--color-text)
+
 .hamburger
   position: relative
-  z-index: 2
+  z-index: 5
   display: none
   @include media($width-hamburger)
     display: block

@@ -22,6 +22,11 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+}
+
 .container {
   max-width: var(--width-container-xxl);
   padding: 0 var(--base-padding);
@@ -33,6 +38,12 @@ a {
   text-transform: uppercase;
   font-family: var(--font-monoton);
   font-size: 30px;
+}
+@media (max-width: 375px) {
+  .logo--position {
+    flex: 1;
+    text-align: center;
+  }
 }
 .logo--yellow {
   color: var(--color-yellow);
@@ -133,6 +144,7 @@ a {
   min-height: 100vh;
   background: url("./../../img/cosmodom-min.jpg") no-repeat 0 0/cover;
   backdrop-filter: blur(30px);
+  overflow: hidden;
 }
 .header::after {
   content: "";
@@ -149,24 +161,58 @@ a {
   z-index: 2;
   min-height: 100vh;
 }
-.header__wrap, .header__inner {
+.header__container.is-active {
+  z-index: auto;
+}
+.header__top {
+  padding-top: 50px;
+}
+@media (min-height: 1000px) and (min-width: 1300px) {
+  .header__top {
+    padding-top: 130px;
+  }
+}
+.header__top, .header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   .header__inner {
     transition: 0.2s;
     position: absolute;
-    top: -100%;
-    left: 50%;
-    width: 50%;
+    top: 0;
+    right: -100%;
+    width: 40%;
     height: 100%;
     background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
   }
-  .header__inner.is-active {
-    transition: 0.2s;
-    top: 0;
+}
+@media (max-width: 576px) {
+  .header__inner {
+    width: 50%;
+  }
+}
+@media (max-width: 375px) {
+  .header__inner {
+    width: 70%;
+  }
+}
+.header__inner.is-active {
+  transition: 0.2s;
+  right: 0;
+  z-index: 2;
+}
+@media (max-width: 1300px) {
+  .header__menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
   }
 }
 .header__link {
@@ -175,13 +221,37 @@ a {
   color: var(--color-title);
   margin-right: 60px;
 }
+@media (max-width: 1550px) {
+  .header__link {
+    margin-right: 35px;
+  }
+}
 @media (max-width: 1400px) {
   .header__link {
     margin-right: 20px;
   }
 }
+@media (max-width: 1300px) {
+  .header__link {
+    margin-right: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--color-yellow);
+    padding-right: 15px;
+    padding-bottom: 15px;
+  }
+}
 .header__link:last-child {
-  margin-right: 130px;
+  margin-right: 120px;
+}
+@media (max-width: 1400px) {
+  .header__link:last-child {
+    margin-right: 80px;
+  }
+}
+@media (max-width: 1300px) {
+  .header__link:last-child {
+    margin-right: 0;
+  }
 }
 .header__number {
   font-family: var(--font-montserrat);
@@ -189,13 +259,81 @@ a {
   font-weight: bold;
   color: var(--color-title);
 }
+@media (max-width: 1300px) {
+  .header__number {
+    padding-right: 15px;
+  }
+}
+.header__middle {
+  margin-top: 100px;
+  font-family: var(--font-montserrat);
+  color: var(--color-white);
+}
+@media (min-height: 1000px) and (min-width: 1300px) {
+  .header__middle {
+    margin-top: 200px;
+  }
+}
+@media (max-width: 1300px) {
+  .header__middle {
+    margin-top: 100px;
+  }
+}
+.header__heading {
+  font-size: 70px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+@media (min-height: 1000px) and (min-width: 1300px) {
+  .header__heading {
+    font-size: 96px;
+  }
+}
+@media (max-width: 1300px) {
+  .header__heading {
+    font-size: 80px;
+  }
+}
+@media (max-width: 1140px) {
+  .header__heading {
+    font-size: 60px;
+  }
+}
+@media (max-width: 576px) {
+  .header__heading {
+    font-size: 48px;
+  }
+}
+@media (max-width: 375px) {
+  .header__heading {
+    font-size: 36px;
+  }
+}
+.header__heading--logo {
+  text-transform: uppercase;
+}
+.header__heading--logo-color {
+  color: var(--color-yellow);
+}
+.header__desc {
+  max-width: 517px;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 26px;
+}
+.header__call {
+  padding: 6px 28px;
+  background: var(--color-yellow);
+  border-radius: 5px;
+  color: var(--color-text);
+}
 
 .hamburger {
   position: relative;
-  z-index: 2;
+  z-index: 5;
   display: none;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   .hamburger {
     display: block;
   }
