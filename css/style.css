@@ -144,7 +144,7 @@ img {
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
-  padding: 15px 15px;
+  padding: 5px 0px;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -167,7 +167,7 @@ img {
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: #000;
+  background-color: var(--color-text);
 }
 
 .hamburger-box {
@@ -185,7 +185,7 @@ img {
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 40px;
   height: 4px;
-  background-color: #000;
+  background-color: var(--color-text);
   border-radius: 4px;
   position: absolute;
   transition-property: transform;
@@ -497,7 +497,7 @@ img {
 }
 .company__info {
   margin-right: 20px;
-  max-width: 720px;
+  max-width: 715px;
 }
 @media (max-width: 1400px) {
   .company__info {
