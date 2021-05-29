@@ -1,7 +1,11 @@
 .services
   padding-top: 100px
-  &__title
+  @include media($width-sm)
+    padding-top: 50px
+  &__heading
     margin-bottom: 40px
+    @include media($width-lg)
+      text-align: center
   &__wrap
     max-width: 1300px
     margin: 0 auto
