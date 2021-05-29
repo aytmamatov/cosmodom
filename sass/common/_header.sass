@@ -59,7 +59,7 @@ $hamburger-types: (3dx)
       text-align: right
   &__link
     font-family: var(--font-montserrat)
-    font-size: 18px
+    font-size: var(--font-text)
     color: var(--color-title)
     margin-right: 60px
     @include media(1550px)
@@ -79,15 +79,13 @@ $hamburger-types: (3dx)
       @include media($width-hamburger)
         margin-right: 0
   &__number
-    font-family: var(--font-montserrat)
-    font-size: 18px
+    font-size: var(--font-text)
     font-weight: bold
     color: var(--color-title)
     @include media($width-hamburger)
       padding-right: 15px
   &__middle
     margin-top: 100px
-    font-family: var(--font-montserrat)
     color: var(--color-white)
     @include media_min_height($height, $width-hamburger)
       margin-top: 200px
@@ -116,7 +114,7 @@ $hamburger-types: (3dx)
   &__desc
     max-width: 517px
     font-weight: 500
-    font-size: 18px
+    font-size: var(--font-text)
     margin-bottom: 26px
   &__call
     padding: 6px 28px

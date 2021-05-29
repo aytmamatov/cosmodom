@@ -1,11 +1,13 @@
 .services
   padding-top: 100px
+  margin-bottom: 100px
   @include media($width-sm)
     padding-top: 50px
+    margin-bottom: 50px
   &__heading
     margin-bottom: 40px
-    @include media($width-lg)
-      text-align: center
+    @include media($width-sm)
+      margin-bottom: 20px
   &__wrap
     max-width: 1300px
     margin: 0 auto
@@ -13,12 +15,13 @@
     align-items: center
     justify-content: space-between
     flex-wrap: wrap
+    @include media($width-hamburger)
+      max-width: 950px
     @include media($width-md)
       justify-content: center
 .service
   min-width: 320px
   transition: .2s
-  font-family: var(--font-montserrat)
   padding: 30px
   display: flex
   align-items: center
