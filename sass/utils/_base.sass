@@ -16,6 +16,8 @@ img
   font-family: var(--font-montserrat)
   position: relative
   overflow: hidden
+  &.is-active
+    max-height: 100vh
 .container
   max-width: var(--width-container-xxl)
   padding: 0 var(--base-padding)
@@ -57,3 +59,20 @@ img
   color: var(--color-text)
   line-height: 1.3
   font-size: var(--font-text)
+.card
+  padding: 30px
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  cursor: pointer
+
+  transition: .2s
+  &:hover
+    box-shadow: var(--box-shadow)
+    border-radius: var(--radiuse-size-sm)
+  &__name
+    display: inline-block
+    color: var(--color-title)
+    font-weight: 600
+    font-size: var(--font-title)
