@@ -97,14 +97,13 @@ $hamburger-types: (3dx)
     font-weight: 600
     margin-bottom: 25px
     @include media_min_height($height, $width-hamburger)
-      font-size: 96px
-
+      font-size: var(--font-size-xxl)
     @include media($width-hamburger)
       font-size: 80px
     @include media($width-xl)
       font-size: 60px
     @include media($width-sm)
-      font-size: 48px
+      font-size: var(--font-size-lg)
     @include media($width-mobile)
       font-size: 36px
     &--logo

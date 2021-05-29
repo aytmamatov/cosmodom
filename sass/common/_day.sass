@@ -1,0 +1,86 @@
+.day
+  margin-bottom: 160px
+  @include media($width-xl)
+    margin-bottom: 80px
+  @include media($width-md)
+    margin-bottom: 50px
+  &__heading
+    margin-bottom: 100px
+  &__wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    @include media($width-hamburger)
+      max-width: 1270px
+    @include media($width-lg)
+      flex-direction: column
+  &__card
+    flex: 1
+    min-height: 630px
+    display: flex
+    align-items: center
+    flex-direction: column
+    padding: 120px 20px
+    border-radius: var(--radiuse-size-sm)
+    overflow: hidden
+    box-shadow: var(--day-box-shadow)
+    text-align: center
+    margin-right: 46px
+    &:last-child
+      margin-right: 0
+      @include media($width-hamburger)
+        margin-bottom: 0
+    @include media($width-hamburger)
+      flex: none
+      min-width: 505px
+      margin-bottom: 50px
+      margin-right: 0
+    @include media($width-xl)
+      min-width: 450px
+    @include media($width-sm)
+      min-height: 500px
+      padding: 20px
+      justify-content: center
+      min-width: 100%
+    &--dark
+      background: var(--bg-color)
+    &--yellow
+      background: var(--color-yellow)
+  &__name
+    color: var(--color-yellow)
+    font-size: var(--font-size-lg)
+    text-transform: uppercase
+    font-weight: 600
+    margin-bottom: 30px
+    &--yellow
+      color: var(--color-text)
+  &__desc
+    max-width: 360px
+    font-family: var(--font-open-sans)
+    font-size: var(--font-title)
+    margin-bottom: 20px
+    &--dark
+      color: var(--color-white)
+  &__price
+    display: flex
+    font-family: var(--font-open-sans)
+    font-size: var(--font-text)
+    &--dark
+      color: var(--color-white)
+
+    &--number
+      font-family: var(--font-montserrat)
+      font-weight: 600
+      color: var(--color-yellow)
+      font-size: var(--font-size-xxl)
+      line-height: 1
+      @include media($width-sm)
+        font-size: var(--font-size-xl)
+      @include media($width-mobile)
+        font-size: var(--font-size-lg)
+      &--yellow
+        color: var(--color-text)
+    &--time
+      align-self: flex-end
+      margin-bottom: 15px
