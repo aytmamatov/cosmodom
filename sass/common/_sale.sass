@@ -1,0 +1,21 @@
+.sale
+  margin-bottom: 200px
+  @include media($width-lg)
+    margin-bottom: 100px
+  @include media($width-sm)
+    margin-bottom: 50px
+  &__heading
+    margin-bottom: 90px
+    @include media($width-md)
+      margin-bottom: 50px
+  &__wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    @include media($width-sm)
+      justify-content: center
+  &__icon
+    margin-bottom: 20px
+  &__name
+    margin-bottom: 30px
