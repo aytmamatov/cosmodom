@@ -4,6 +4,7 @@
   --color-yellow: #FFBC68;
   --color-white: #fff;
   --color-rgba-white: rgba(255, 255, 255, 0.5);
+  --bg-yellow: #FFCD8E;
   --width-container-xxl: 1650px;
   --base-padding: 15px;
   --font-krona-one: "Krona One", sans-serif;
@@ -110,16 +111,27 @@ img {
 }
 
 .btn {
+  font-size: var(--base-font-size);
   padding: 5px 48px;
   transition: 0.2s;
   color: var(--color-text);
   font-family: var(--font-montserrat);
   border-radius: var(--radius-size);
-  background: var(--color-yellow);
+  background: var(--bg-yellow);
 }
 .btn:hover {
   background: #ffa535;
   color: white;
+}
+.btn-dark {
+  border: 1px solid transparent;
+  background: var(--color-text);
+  color: var(--color-white);
+}
+.btn-dark:hover {
+  background: var(--color-yellow);
+  color: var(--color-text);
+  border: 1px solid var(--color-text);
 }
 
 .title {
@@ -1043,6 +1055,192 @@ img {
     order: -1;
     margin-bottom: 30px;
   }
+}
+
+.market {
+  display: flex;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+@media (max-width: 1140px) {
+  .market {
+    flex-direction: column;
+  }
+}
+
+.sidebar {
+  min-width: 557px;
+  margin-right: 60px;
+  padding: 45px;
+  border-radius: 0px var(--radiuse-size-sm) var(--radiuse-size-sm) 0px;
+  overflow: hidden;
+  background: var(--color-yellow);
+}
+@media (max-width: 1400px) {
+  .sidebar {
+    border-radius: var(--radiuse-size-sm);
+    min-width: 380px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 1140px) {
+  .sidebar {
+    margin-right: 0;
+    min-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    min-width: 100vw;
+  }
+}
+.sidebar__inner {
+  max-width: 312px;
+  margin: 0 auto;
+}
+@media (max-width: 1140px) {
+  .sidebar__inner {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.sidebar__position {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+@media (max-width: 1140px) {
+  .sidebar__form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar__form {
+    flex-direction: column;
+  }
+}
+.sidebar__box {
+  margin-bottom: 40px;
+}
+.sidebar__title {
+  display: inline-block;
+  font-family: var(--font-montserrat);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.sidebar__heading {
+  margin-bottom: 30px;
+}
+.sidebar__number {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+.sidebar__number:last-child {
+  margin-bottom: 0;
+}
+.sidebar__select {
+  min-width: 207px;
+  max-width: 207px;
+  display: block;
+  border: 1px solid var(--color-title);
+  background: transparent;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: #131313;
+}
+.sidebar__select:last-child {
+  margin-bottom: 0;
+}
+.sidebar__btn-find {
+  padding: 5px 0;
+  max-width: 200px;
+  width: 100%;
+}
+@media (max-width: 1140px) {
+  .sidebar__btn-find {
+    margin-left: auto;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar__btn-find {
+    margin-left: 0;
+  }
+}
+
+.market__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 1140px) {
+  .market__body {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .market__body {
+    flex-direction: column;
+  }
+}
+.market__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--radiuse-size-sm);
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 54px;
+}
+@media (max-width: 1140px) {
+  .market__card {
+    margin-right: 60px;
+  }
+}
+@media (max-width: 960px) {
+  .market__card {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .market__card {
+    margin-right: 0;
+  }
+}
+.market__card-inner {
+  padding: 20px 20px 70px 20px;
+}
+.market__card-text {
+  font-size: var(--font-text);
+  max-width: 250px;
+  margin-bottom: 8px;
+}
+.market__card-price {
+  display: block;
+  color: var(--color-yellow);
+  font-size: var(--font-text);
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

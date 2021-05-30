@@ -1,0 +1,128 @@
+.market
+  display: flex
+  max-width: 1920px
+  margin: 0 auto
+  @include media($width-xl)
+    flex-direction: column
+.sidebar
+  min-width: 557px
+  margin-right: 60px
+  padding: 45px
+  border-radius: 0px var(--radiuse-size-sm) var(--radiuse-size-sm) 0px
+  overflow: hidden
+  background: var(--color-yellow)
+  @include media($width-xxl)
+    border-radius: var(--radiuse-size-sm)
+    min-width: 380px
+    margin-bottom: 50px
+  @include media($width-xl)
+    margin-right: 0
+    min-width: 100%
+  @include media($width-md)
+    min-width: 100vw
+  &__inner
+    max-width: 312px
+    margin: 0 auto
+    @include media($width-xl)
+      max-width: 100%
+    @include media($width-md)
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+  &__position
+    display: flex
+    align-items: start
+    flex-direction: column
+  &__form
+    @include media($width-xl)
+      display: flex
+      flex-wrap: wrap
+      width: 100%
+      justify-content: space-between
+      align-items: start
+    @include media($width-md)
+      flex-direction: column
+  &__box
+    margin-bottom: 40px
+
+  &__title
+    display: inline-block
+    font-family: var(--font-montserrat)
+    color: var(--color-text)
+    font-size: var(--font-size-sm)
+    text-transform: uppercase
+    font-weight: 600
+    margin-bottom: 15px
+  &__heading
+    margin-bottom: 30px
+  &__number
+    color: var(--color-text)
+    font-size: var(--font-size-sm)
+    font-weight: 600
+    margin-left: 5px
+    margin-bottom: 5px
+    &:last-child
+      margin-bottom: 0
+  &__select
+    min-width: 207px
+    max-width: 207px
+    display: block
+    border: 1px solid var(--color-title)
+    background: transparent
+    margin-bottom: 20px
+    font-weight: 600
+    font-size: var(--font-size-sm)
+
+    color: #131313
+    &:last-child
+      margin-bottom: 0
+  &__btn
+    &-find
+      padding: 5px 0
+      max-width: 200px
+      width: 100%
+      @include media($width-xl)
+        margin-left: auto
+      @include media($width-md)
+        margin-left: 0
+
+.market
+  &__body
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    @include media($width-xl)
+      justify-content: center
+    @include media($width-md)
+      flex-direction: column
+  &__card
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    box-shadow: var(--box-shadow)
+    border-radius: var(--radiuse-size-sm)
+    overflow: hidden
+    text-align: center
+    margin-bottom: 54px
+    @include media($width-xl)
+      margin-right: 60px
+    @include media($width-lg)
+      margin-right: 20px
+    @include media($width-md)
+      margin-right: 0
+
+    &-inner
+      padding: 20px 20px 70px 20px
+    &-text
+      font-size: var(--font-text)
+      max-width: 250px
+      margin-bottom: 8px
+    &-price
+      display: block
+      color: var(--color-yellow)
+      font-size: var(--font-text)
+      font-weight: bold
+      margin-bottom: 20px
