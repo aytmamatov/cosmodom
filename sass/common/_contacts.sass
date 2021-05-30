@@ -15,6 +15,16 @@
       flex-wrap: wrap
     @include media($width-md)
       flex-direction: column
+  &__email, &__phone
+    margin-right: 100px
+    @include media($width-lg)
+      margin-right: 20px
+    @include media($width-md)
+      margin-right: 0
+  &__email
+    margin-bottom: 68px
+    @include media($width-hamburger)
+      margin-bottom: 20px
   &__text
     display: inline-block
     font-size: var(--font-size-md)
@@ -22,22 +32,15 @@
     font-weight: 700
     text-transform: uppercase
     margin-bottom: 20px
-    margin-right: 20px
     @include media($width-hamburger)
       font-size: var(--font-size-sm)
     @include media($width-md)
+      margin-right: 20px
       text-align: center
       margin-right: 0
+      margin-bottom: 50px
       &:last-child
         margin-bottom: 0
-  &__email, &__phone
-    margin-right: 100px
-    @include media($width-lg)
-      margin-right: 20px
-  &__email
-    margin-bottom: 68px
-    @include media($width-hamburger)
-      margin-bottom: 20px
   &__work
     text-transform: none
   &__link
