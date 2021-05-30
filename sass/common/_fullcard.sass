@@ -1,0 +1,56 @@
+.fullcard
+  display: flex
+  align-items: center
+  justify-content: space-between
+  box-shadow: var(--box-shadow)
+  border-radius: var(--radiuse-size-sm)
+  overflow: hidden
+  margin-bottom: 150px
+  @include media( $width-xl)
+    flex-direction: column
+  @include media( $width-md)
+    margin-bottom: 80px
+  &__img
+    border-radius: 0px 0px var(--radiuse-size-sm) 0px
+    overflow: hidden
+    @include media( $width-xl)
+      border-radius: 0px
+      width: 100%
+  &__photo
+    @include media( $width-xl)
+      width: 100%
+      max-height: 500px
+  &__info
+    max-width: 550px
+    margin-left: 100px
+    @include media( $width-xl)
+      max-width: 100%
+      margin-left: 0
+      padding: 50px
+    @include media( $width-md)
+      padding: 20px
+  &__title
+    margin-bottom: 36px
+    font-weight: 600
+    font-size: var(--font-size-md)
+    color: var(--color-title)
+    @include media( $width-md)
+      font-size: 30px
+    @include media( $width-sm)
+      font-size: var(--font-title)
+  &__price
+    display: block
+    color: var(--color-yellow)
+    margin-bottom: 46px
+    font-size: var(--font-text)
+    font-weight: bold
+  &__btn
+    display: flex
+    align-items: center
+    justify-content: center
+  &__icon
+    margin-right: 5px
+    &:first-child
+      margin-left: 5px
+    &:last-child
+      margin-right: 0
