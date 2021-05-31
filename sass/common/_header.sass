@@ -27,7 +27,15 @@ $hamburger-layer-color: var(--color-text)
     min-height: 100vh
     &.is-active
       z-index: auto
+  &--wrap
+    min-height: 100vh
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    align-items: start
+
   &__top
+    width: 100%
     padding-top: 50px
     @include media_min_height($height, $width-hamburger)
       padding-top: 130px
@@ -91,13 +99,13 @@ $hamburger-layer-color: var(--color-text)
     @include media($width-hamburger)
       padding-right: 15px
   &__middle
-    margin-top: 100px
+    flex: 1
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: start
     color: var(--color-white)
-    @include media_min_height($height, $width-hamburger)
-      margin-top: 200px
 
-    @include media($width-hamburger)
-      margin-top: 100px
   &__heading
     font-size: 70px
     font-weight: 600
@@ -113,6 +121,7 @@ $hamburger-layer-color: var(--color-text)
     @include media($width-mobile)
       font-size: var(--font-size-md)
     &--logo
+      display: block
       text-transform: uppercase
       &-color
         color: var(--color-yellow)
