@@ -66,16 +66,21 @@ $hamburger-layer-color: var(--color-text)
       right: 0
       z-index: 2
   &__menu
+    display: flex
+    justify-content: space-between
+    list-style-type: none
+
     @include media($width-hamburger)
       width: 100%
-      display: flex
       flex-direction: column
       text-align: right
-  &__link
-    font-family: var(--font-montserrat)
-    font-size: var(--font-text)
-    color: var(--color-title)
+  &__item
+    position: relative
     margin-right: 60px
+    &:hover .header__dropdown
+      transition: .1s
+      visibility: visible
+      opacity: 1
     @include media(1550px)
       margin-right: 35px
     @include media($width-xxl)
@@ -92,6 +97,48 @@ $hamburger-layer-color: var(--color-text)
         margin-right: 80px
       @include media($width-hamburger)
         margin-right: 0
+  &__dropdown
+    z-index: 3
+    position: absolute
+    top: 25px
+    right: 0
+    opacity: 0
+    visibility: hidden
+    box-shadow: var(--box-shadow)
+    min-width: 204px
+    padding: 20px 0
+    background: var(--color-white)
+    border-radius: var(--radius-size-img)
+    border-top-right-radius: 0px
+    list-style-type: none
+    @include media($width-hamburger)
+      right: 50%
+    &-link
+      transition: .1s
+      padding: 6px 20px
+      display: block
+      font-family: var(--font-montserrat)
+      font-size: var(--font-size-es)
+      color: var(--color-title)
+      margin-bottom: 16px
+      border-bottom: 1px solid var(--color-yellow)
+      &:hover
+        transition: .1s
+        color: darken($color-yellow, 20%)
+
+  &__link
+    position: relative
+    z-index: 2
+    font-family: var(--font-montserrat)
+    font-size: var(--font-text)
+    color: var(--color-title)
+    @include media($width-hamburger)
+      display: flex
+      align-items: center
+      flex-direction: row-reverse
+  &__down
+    @include media($width-hamburger)
+      transform: rotate(90deg)
   &__number
     font-size: var(--font-text)
     font-weight: bold

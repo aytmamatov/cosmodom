@@ -538,32 +538,39 @@ img {
   right: 0;
   z-index: 2;
 }
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
 @media (max-width: 1300px) {
   .header__menu {
     width: 100%;
-    display: flex;
     flex-direction: column;
     text-align: right;
   }
 }
-.header__link {
-  font-family: var(--font-montserrat);
-  font-size: var(--font-text);
-  color: var(--color-title);
+.header__item {
+  position: relative;
   margin-right: 60px;
 }
+.header__item:hover .header__dropdown {
+  transition: 0.1s;
+  visibility: visible;
+  opacity: 1;
+}
 @media (max-width: 1550px) {
-  .header__link {
+  .header__item {
     margin-right: 35px;
   }
 }
 @media (max-width: 1400px) {
-  .header__link {
+  .header__item {
     margin-right: 20px;
   }
 }
 @media (max-width: 1300px) {
-  .header__link {
+  .header__item {
     margin-right: 0;
     margin-bottom: 20px;
     border-bottom: 1px solid var(--color-yellow);
@@ -571,17 +578,70 @@ img {
     padding-bottom: 15px;
   }
 }
-.header__link:last-child {
+.header__item:last-child {
   margin-right: 120px;
 }
 @media (max-width: 1400px) {
-  .header__link:last-child {
+  .header__item:last-child {
     margin-right: 80px;
   }
 }
 @media (max-width: 1300px) {
-  .header__link:last-child {
+  .header__item:last-child {
     margin-right: 0;
+  }
+}
+.header__dropdown {
+  z-index: 3;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: var(--box-shadow);
+  min-width: 204px;
+  padding: 20px 0;
+  background: var(--color-white);
+  border-radius: var(--radius-size-img);
+  border-top-right-radius: 0px;
+  list-style-type: none;
+}
+@media (max-width: 1300px) {
+  .header__dropdown {
+    right: 50%;
+  }
+}
+.header__dropdown-link {
+  transition: 0.1s;
+  padding: 6px 20px;
+  display: block;
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-es);
+  color: var(--color-title);
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--color-yellow);
+}
+.header__dropdown-link:hover {
+  transition: 0.1s;
+  color: #ff8f02;
+}
+.header__link {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-montserrat);
+  font-size: var(--font-text);
+  color: var(--color-title);
+}
+@media (max-width: 1300px) {
+  .header__link {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+}
+@media (max-width: 1300px) {
+  .header__down {
+    transform: rotate(90deg);
   }
 }
 .header__number {
