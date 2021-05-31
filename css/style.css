@@ -642,6 +642,7 @@ img {
 @media (max-width: 1300px) {
   .header__down {
     transform: rotate(90deg);
+    margin-right: 5px;
   }
 }
 .header__number {
