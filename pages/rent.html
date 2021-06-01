@@ -17,25 +17,142 @@
         <div class="container">
           <div class="header__wrap">
             <div class="header__top">
-              <p class="logo logo--dark logo--position">
+              <a href="/" class="logo logo--position logo--dark">
                 cosmo <span class="logo--yellow">dom</span>
-              </p>
+              </a>
               <button class="hamburger hamburger--3dx" type="button">
                 <span class="hamburger-box">
                   <span class="hamburger-inner"></span>
                 </span>
               </button>
               <div class="header__inner">
-                <div class="header__menu">
-                  <a href="#" class="header__link">Главная</a>
-                  <a href="#" class="header__link">Услуги</a>
-                  <a href="#" class="header__link">О компании</a>
-                  <a href="#" class="header__link header__rent">Аренда</a>
-                  <a href="#" class="header__link">По суточно</a>
-                  <a href="#" class="header__link">Продажа</a>
-                  <a href="#" class="header__link">Контакты</a>
-                </div>
-                <span class="header__number">+996-707-314-129</span>
+                <ul class="header__menu">
+                  <li class="header__item">
+                    <a href="#" class="header__link main_link">Главная</a>
+                  </li>
+                  <li class="header__item">
+                    <a href="#" class="header__link services_link"
+                      >Услуги
+                      <img
+                        src="./../img/header/down.svg"
+                        class="header__down"
+                        alt="down"
+                    /></a>
+                    <ul class="header__dropdown">
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link"
+                          >Для арендотаторов</a
+                        >
+                      </li>
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link"
+                          >Для арендотателей
+                        </a>
+                      </li>
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link"
+                          >Для покупателей</a
+                        >
+                      </li>
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link"
+                          >Для продавцов</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header__item">
+                    <a href="#" class="header__link company_link">О компании</a>
+                  </li>
+                  <li class="header__item">
+                    <a href="#" class="header__link header__rent rent_link"
+                      >Аренда
+                      <img
+                        src="./../img/header/down.svg"
+                        class="header__down"
+                        alt="down"
+                    /></a>
+                    <ul class="header__dropdown">
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link"
+                          >Частный дом
+                        </a>
+                      </li>
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link">Квартира</a>
+                      </li>
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link">Особняк</a>
+                      </li>
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link">Помещение</a>
+                      </li>
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link"
+                          >С подселением</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header__item">
+                    <a href="#" class="header__link day_link"
+                      >По суточно
+                      <img
+                        src="./../img/header/down.svg"
+                        class="header__down"
+                        alt="down"
+                      />
+                    </a>
+                    <ul class="header__dropdown">
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link">Lite </a>
+                      </li>
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link">Lux</a>
+                      </li>
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link">De-Lux</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header__item">
+                    <a href="#" class="header__link sale_link"
+                      >Продажа
+                      <img
+                        src="./../img/header/down.svg"
+                        class="header__down"
+                        alt="down"
+                      />
+                    </a>
+                    <ul class="header__dropdown">
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link"
+                          >Частный дом</a
+                        >
+                      </li>
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link">Квартира</a>
+                      </li>
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link">Особняк</a>
+                      </li>
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link">Помещение</a>
+                      </li>
+                      <li class="header__dropdown-item">
+                        <a href="#" class="header__dropdown-link"
+                          >С подселением</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header__item">
+                    <a href="#" class="header__link">Контакты</a>
+                  </li>
+                </ul>
+                <a href="tel:+996-707-314-129" class="header__number"
+                  >+996-707-314-129</a
+                >
               </div>
             </div>
           </div>
@@ -97,7 +214,7 @@
                 кв м,
               </p>
               <span class="market__card-price">38000 сом </span>
-              <button class="btn">Подробнее</button>
+              <a href="/pages/fullcard.html" class="btn">Подробнее</a>
             </div>
           </div>
           <div class="market__card">
@@ -110,7 +227,7 @@
                 кв м,
               </p>
               <span class="market__card-price">38000 сом </span>
-              <button class="btn">Подробнее</button>
+              <a href="/pages/fullcard.html" class="btn">Подробнее</a>
             </div>
           </div>
           <div class="market__card">
@@ -123,7 +240,7 @@
                 кв м,
               </p>
               <span class="market__card-price">38000 сом </span>
-              <button class="btn">Подробнее</button>
+              <a href="/pages/fullcard.html" class="btn">Подробнее</a>
             </div>
           </div>
           <div class="market__card">
@@ -136,7 +253,7 @@
                 кв м,
               </p>
               <span class="market__card-price">38000 сом </span>
-              <button class="btn">Подробнее</button>
+              <a href="/pages/fullcard.html" class="btn">Подробнее</a>
             </div>
           </div>
           <div class="market__card">
@@ -149,7 +266,7 @@
                 кв м,
               </p>
               <span class="market__card-price">38000 сом </span>
-              <button class="btn">Подробнее</button>
+              <a href="/pages/fullcard.html" class="btn">Подробнее</a>
             </div>
           </div>
           <div class="market__card">
@@ -162,7 +279,7 @@
                 кв м,
               </p>
               <span class="market__card-price">38000 сом </span>
-              <button class="btn">Подробнее</button>
+              <a href="/pages/fullcard.html" class="btn">Подробнее</a>
             </div>
           </div>
         </div>

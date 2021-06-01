@@ -76,6 +76,8 @@ html {
 }
 .wrapper.is-active {
   max-height: 100vh;
+  backdrop-filter: blur(30px);
+  background: rgba(0, 0, 0, 0.15);
 }
 
 .container {

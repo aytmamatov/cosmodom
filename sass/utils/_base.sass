@@ -27,8 +27,11 @@ html
   font-family: var(--font-montserrat)
   position: relative
   overflow: hidden
+
   &.is-active
     max-height: 100vh
+    backdrop-filter: blur(30px)
+    background: rgba(0, 0, 0, 0.15)
 .container
   max-width: var(--width-container-xxl)
   padding: 0 var(--base-padding)
