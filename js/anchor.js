@@ -17,6 +17,10 @@ $(document).ready(function () {
   $(".sale_link").click(function () {
     anchorHandler(".sale");
   });
+  $(".contact_link").click(function () {
+    anchorHandler(".contacts");
+  });
+
   function anchorHandler(target) {
     let hamburger = $(".hamburger");
     if (hamburger.hasClass("is-active")) {
@@ -28,9 +32,9 @@ $(document).ready(function () {
     $("html, body").animate(
       {
         scrollTop: $(target).offset().top + "px",
-      }
-      // 1000,
-      // "swing"
+      },
+      1000,
+      "swing"
     );
   }
 });

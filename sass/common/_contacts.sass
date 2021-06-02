@@ -1,13 +1,11 @@
 .contacts
-  margin-bottom: 100px
-  @include media($width-sm)
-    margin-bottom: 60px
   &__title
     font-weight: 700
     margin-bottom: 115px
     @include media($width-md)
       margin-bottom: 60px
   &__inner
+    margin-bottom: 100px
     @include media($width-hamburger)
       display: flex
       align-items: center
@@ -46,3 +44,11 @@
   &__link
     color: var(--color-yellow)
     text-transform: none
+  &__map
+    &-iframe      
+      width: 100%
+      min-height: 800px
+      @include media($width-md)
+        min-height: 600px
+      @include media($width-md)
+        min-height: 500px
